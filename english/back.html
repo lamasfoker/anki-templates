@@ -22,8 +22,11 @@
     </svg>
   </div>
 </div>
+<span id="front-var" class="hidden">{{Front}}</span>
+<span id="example-var" class="hidden">{{Example}}</span>
+<span id="definition-var" class="hidden">{{Definition}}</span>
 <script>
-  (function() {
+  (function () {
     const $ = document.querySelector.bind(document);
     const color = localStorage.getItem('color');
     if (color !== null) {
@@ -80,11 +83,11 @@
         audio.play();
       })
     };
-    const example = '{{Example}}';
+    const example = $('#example-var').innerText;
     const $example = $('#example');
-    const definition = '{{Definition}}';
+    const definition = $('#definition-var').innerText;
     const $definition = $('#definition');
-    const front = '{{Front}}';
+    const front = $('#front-var').innerText;
     const $front = $('#front');
 
     $front.innerHTML = front;

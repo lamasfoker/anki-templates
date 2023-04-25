@@ -10,12 +10,14 @@
   <div id="front"
        class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-center text-4xl font-bold uppercase"></div>
 </div>
+<span id="front-var" class="hidden">{{Front}}</span>
+<span id="definition-var" class="hidden">{{Definition}}</span>
 <script>
-  (function() {
+  (function () {
     const $ = document.querySelector.bind(document);
     const html = $('html');
     const randomChoice = Math.round(Math.random());
-    const choices = ['{{Front}} ', '{{Definition}}'];
+    const choices = [$('#front-var').innerText, $('#definition-var').innerText];
     $('#front').innerText = choices[randomChoice];
 
     const colors = ['bg-[#e0ffcd]', 'bg-[#fdffcd]', 'bg-[#c24d2c]', 'bg-[#f4aeba]', 'bg-[#5585b5]', 'bg-[#ffe4c4]', 'bg-[#d59bf6]', 'bg-[#bbe4e9]'];
