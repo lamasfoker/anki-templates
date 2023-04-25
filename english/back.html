@@ -24,25 +24,26 @@
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
+    const $ = document.querySelector.bind(document);
     const fillPronunciationElement = async function (word) {
-      const $pronunciation = document.querySelector('#pronunciation')
-      $pronunciation.innerHTML = await getPronunciation(word)
+      const $pronunciation = $('#pronunciation');
+      $pronunciation.innerHTML = await getPronunciation(word);
       if ($pronunciation.innerHTML === '') {
-        document.querySelector('#pronunciation').classList.add('hidden');
+        $pronunciation.classList.add('hidden');
       }
     }
     const getPronunciation = async function (word) {
       let response = await fetch('https://en.wiktionary.org/w/api.php?action=parse&format=json&prop=text&origin=*&page=' + word);
 
-      const json = await response.json()
-      const html = json.parse.text['*']
-      let $pronunciation = new DOMParser().parseFromString(html, 'text/html').body.querySelector('.ipa')
+      const json = await response.json();
+      const html = json.parse.text['*'];
+      let $pronunciation = new DOMParser().parseFromString(html, 'text/html').body.querySelector('.ipa');
 
       if (!$pronunciation) {
-        return null
+        return null;
       }
 
-      return $pronunciation.innerHTML
+      return $pronunciation.innerHTML;
     }
     const getAudioSrc = function (word) {
       word = word.toLowerCase();
@@ -61,7 +62,7 @@
         word + '.mp3';
     };
     const createAudioElement = function (front) {
-      const $play = document.querySelector('#play');
+      const $play = $('#play');
       let audio = document.createElement('audio');
       audio.autoplay = true;
       audio.src = getAudioSrc(front);
@@ -74,23 +75,23 @@
         audio.play();
       })
     };
-    const example = '{{Example}}'
-    const $example = document.querySelector('#example')
-    const definition = '{{Definition}}'
-    const $definition = document.querySelector('#definition')
-    const front = '{{Front}}'
-    const $front = document.querySelector('#front')
+    const example = '{{Example}}';
+    const $example = $('#example');
+    const definition = '{{Definition}}';
+    const $definition = $('#definition');
+    const front = '{{Front}}';
+    const $front = $('#front');
 
-    $front.innerHTML = front
+    $front.innerHTML = front;
     if (definition !== '') {
-      $definition.innerHTML = definition
+      $definition.innerHTML = definition;
     } else {
-      $definition.classList.add('hidden')
+      $definition.classList.add('hidden');
     }
     if (example !== '') {
-      $example.innerHTML = example
+      $example.innerHTML = example;
     } else {
-      $example.classList.add('hidden')
+      $example.classList.add('hidden');
     }
     createAudioElement(front);
     await fillPronunciationElement(front);

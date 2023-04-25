@@ -12,9 +12,10 @@
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
+    const $ = document.querySelector.bind(document);
     const randomChoice = Math.round(Math.random());
     const choices = ['{{Front}} ', '{{Definition}}'];
-    document.querySelector('#front').innerText = choices[randomChoice];
+    $('#front').innerText = choices[randomChoice];
   });
 </script>
 </body>
