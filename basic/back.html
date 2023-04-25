@@ -15,11 +15,9 @@
 <script>
   (function() {
     const $ = document.querySelector.bind(document);
-
     const color = localStorage.getItem('color');
     if (color !== null) {
-      const body = $('body') || $('.card');
-      body.classList.add(color);
+      $('html').classList.add(color);
     }
   })();
 </script>
