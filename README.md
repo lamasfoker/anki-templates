@@ -1,4 +1,4 @@
-# AnkiDroid Clean Card Template
+# Anki Clean Card Templates
 
 <div style="display:flex;">
   <img src="https://i.imgur.com/YVezAfz.jpeg" alt="drawing" width="200"/>
