@@ -11,11 +11,14 @@ The Clean Card Templates are templates for your Anki flashcards.
 
 1. Beautiful Style! ✨✨
 2. The English Template tries to auto import the audio of the pronunciation! Only for single word. 🤖🎵
-3. Fight back the [Context Dependent Memory](https://en.wikipedia.org/wiki/Context-dependent_memory) changing template colors and fonts and switching words! 🧠🧠
+3. The English Template tries to auto import the IPA notation! Only for single word. 🤖✏️
+4. Fight back the [Context Dependent Memory](https://en.wikipedia.org/wiki/Context-dependent_memory) changing template colors and fonts and switching words! 🧠🧠
 
 ## Compatibility:
 Is this template compatible with my version of Anki?
 The Clean Card Template has been optimized for the mobile version of the app, but you can use it also on the Desktop version.
+
+Due to autoimport features it is mandatory to have a internet connection while using this templates.
 
 ## Templates
 
@@ -29,6 +32,6 @@ Create the followings fields for the new template:
 
 Create the followings fields for the new template:
 1. Front: the world in english;
-2. Translation: the world in your language;
-3. Example;
-4. Pronunciation.
+2. Translation: the world in your language, if not present it tries to autodetect it;
+3. Example: not mandatory;
+4. Pronunciation: the IPA notation, if not present it tries to autodetect it.
