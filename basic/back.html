@@ -12,5 +12,16 @@
     <p class="pt-8 border-t">{{Front}}</p>
   </div>
 </div>
+<script>
+  (function() {
+    const $ = document.querySelector.bind(document);
+
+    const color = localStorage.getItem('color');
+    if (color !== null) {
+      const body = $('body') || $('.card');
+      body.classList.add(color);
+    }
+  })();
+</script>
 </body>
 </html>
