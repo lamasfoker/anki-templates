@@ -9,8 +9,8 @@
   class="absolute top-1/2 left-1/2 h-[90%] w-[90%] max-w-sm -translate-y-1/2 -translate-x-1/2 overflow-hidden rounded-xl shadow-lg bg-white/[.6]">
   <div class="px-6 pt-4">
     <div id="front" class="py-8 text-center text-3xl font-bold uppercase"></div>
-    <p id="definition" class="text-base text-gray-700 first-letter:capitalize"></p>
-    <q id="example" class="text-base text-gray-500 border-t pt-2 mt-2 block"></q>
+    <div id="translation" class="py-8 text-center text-3xl font-bold uppercase"></div>
+    <q id="example" class="text-base text-gray-500 border-t border-gray-500 pt-8 block"></q>
   </div>
   <div class="p-8">
     <p id="pronunciation" class="pb-4 text-center lowercase text-3xl text-gray-700"></p>
@@ -24,7 +24,7 @@
 </div>
 <span id="front-var" class="hidden">{{Front}}</span>
 <span id="example-var" class="hidden">{{Example}}</span>
-<span id="definition-var" class="hidden">{{Definition}}</span>
+<span id="translation-var" class="hidden">{{Translation}}</span>
 <script>
   (function () {
     const $ = document.querySelector.bind(document);
@@ -85,16 +85,16 @@
     };
     const example = $('#example-var').innerText;
     const $example = $('#example');
-    const definition = $('#definition-var').innerText;
-    const $definition = $('#definition');
+    const translation = $('#translation-var').innerText;
+    const $translation = $('#translation');
     const front = $('#front-var').innerText;
     const $front = $('#front');
 
     $front.innerHTML = front;
-    if (definition !== '') {
-      $definition.innerHTML = definition;
+    if (translation !== '') {
+      $translation.innerHTML = translation;
     } else {
-      $definition.classList.add('hidden');
+      $translation.classList.add('hidden');
     }
     if (example !== '') {
       $example.innerHTML = example;
