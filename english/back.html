@@ -28,7 +28,7 @@
 <script>
   (function () {
     const $ = document.querySelector.bind(document);
-    const color = localStorage.getItem('color');
+    const color = sessionStorage.getItem('color');
     if (color !== null) {
       $('html').classList.add(color);
     }
