@@ -14,22 +14,20 @@
 <span id="back-var" class="hidden">{{Back}}</span>
 <script>
   (function () {
-    document.addEventListener('DOMContentLoaded', async function () {
-      const $ = document.querySelector.bind(document);
-      const html = $('html');
-      const randomChoice = Math.round(Math.random());
-      const choices = [$('#front-var').innerText, $('#back-var').innerText];
-      $('#front').innerText = choices[randomChoice];
+    const $ = document.querySelector.bind(document);
+    const html = $('html');
+    const randomChoice = Math.round(Math.random());
+    const choices = [$('#front-var').innerText, $('#back-var').innerText];
+    $('#front').innerText = choices[randomChoice];
 
-      const colors = ['bg-[#e0ffcd]', 'bg-[#fdffcd]', 'bg-[#c24d2c]', 'bg-[#f4aeba]', 'bg-[#5585b5]', 'bg-[#ffe4c4]', 'bg-[#d59bf6]', 'bg-[#bbe4e9]'];
-      const randomColorChoice = Math.floor(Math.random() * colors.length);
-      html.classList.add(colors[randomColorChoice]);
-      sessionStorage.setItem('color', colors[randomColorChoice]);
+    const colors = ['bg-[#e0ffcd]', 'bg-[#fdffcd]', 'bg-[#c24d2c]', 'bg-[#f4aeba]', 'bg-[#5585b5]', 'bg-[#ffe4c4]', 'bg-[#d59bf6]', 'bg-[#bbe4e9]'];
+    const randomColorChoice = Math.floor(Math.random() * colors.length);
+    html.classList.add(colors[randomColorChoice]);
+    sessionStorage.setItem('color', colors[randomColorChoice]);
 
-      const fontFamilies = ['font-mono', 'font-serif', 'font-sans'];
-      const randomFontFamilyChoice = Math.floor(Math.random() * fontFamilies.length);
-      html.classList.add(fontFamilies[randomFontFamilyChoice]);
-    });
+    const fontFamilies = ['font-mono', 'font-serif', 'font-sans'];
+    const randomFontFamilyChoice = Math.floor(Math.random() * fontFamilies.length);
+    html.classList.add(fontFamilies[randomFontFamilyChoice]);
   })();
 </script>
 </body>
