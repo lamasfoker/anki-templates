@@ -1,8 +1,8 @@
 # Anki Clean Card Templates
 
 <div style="display:flex;">
-  <img src="https://i.imgur.com/X683n7S.jpg" alt="drawing" width="200"/>
   <img src="https://i.imgur.com/aIx47fr.jpg" alt="drawing" width="200"/>
+  <img src="https://i.imgur.com/X683n7S.jpg" alt="drawing" width="200"/>
 </div>
 
 The Clean Card Templates are templates for your Anki flashcards.
