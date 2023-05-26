@@ -22,6 +22,9 @@
 
     const colors = ['bg-[#e0ffcd]', 'bg-[#fdffcd]', 'bg-[#c24d2c]', 'bg-[#f4aeba]', 'bg-[#5585b5]', 'bg-[#ffe4c4]', 'bg-[#d59bf6]', 'bg-[#bbe4e9]'];
     const randomColorChoice = Math.floor(Math.random() * colors.length);
+    colors.forEach(color => {
+      html.classList.remove(color);
+    });
     html.classList.add(colors[randomColorChoice]);
     sessionStorage.setItem('color', colors[randomColorChoice]);
 
